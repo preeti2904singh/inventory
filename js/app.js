@@ -32,7 +32,7 @@ $(document).ready(function () {
         tr.append("<td contenteditable='true'>" + json[i].Item + "</td>");
         tr.append("<td contenteditable='false'>" + json[i].Place + "</td>");
         tr.append("<td contenteditable='false'>" + json[i].Time + "</td>");
-        tr.append("<td><div class='edit_button' data-value='Update' value='Update' class='edit'>Update &nbsp;</div> | &nbsp; <span class='delete' value='Delete' onclick='delete_row(this)'>Delete</span></td>");
+        tr.append("<td><div class='edit_button' data-value='Update' value='Update' class='edit'>Update</div>  &nbsp;| &nbsp; <span class='delete' value='Delete' onclick='delete_row(this)'>Delete</span></td>");
         $('.table').append(tr);
     }
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
         var item = $("#item").val();
         var place = $("#place").val();
         var time = $("#time").val();
-        var markup = "<tr><td>" + item + "</td><td>" + place + "</td><td>" + time + "</td><td><div class='edit_button' data-value='Update' value='Update' class='edit'>Update </div> &nbsp; | &nbsp; <span class='delete' value='Delete' onclick='delete_row(this)'>Delete</span></td></tr>";
+        var markup = "<tr><td>" + item + "</td><td>" + place + "</td><td>" + time + "</td><td><div class='edit_button' data-value='Update' value='Update' class='edit'>Update</div>  &nbsp;| &nbsp; <span class='delete' value='Delete' onclick='delete_row(this)'>Delete</span></tr>";
         if($('#item, #place, #time').val() == ''){
           alert('Input can not be left blank');
         }else{
@@ -57,13 +57,14 @@ $(document).ready(function () {
             return $(this).find('.edit_button').length === 0;
         });
         if ($this.data('value') === 'Update') {
-            $this.html('Save');
-            tds.prop('contenteditable', true);
-            tds.focus();
+           $this.data('value', 'Save');
+           $this.html('Save');
+           tds.prop('contenteditable', true);
+           tds.focus();
         } else {
-            $this.html('Update');
-
-            tds.prop('contenteditable', false);
+           $this.data('value', 'Update');
+           $this.html('Update');
+           tds.prop('contenteditable', false);
         }
 
     });
