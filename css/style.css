@@ -1,0 +1,70 @@
+/*nav {
+    background: #000;
+}*/
+
+nav.navbar.navbar-default.custom_nav {
+    margin-bottom: -20px;
+}
+
+.search_wrap {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.search_wrap {
+    width: 40%;
+    margin: 60px auto;
+    font-size: 16px;
+}
+
+i.fa.fa-search.icon_search {
+    position: absolute;
+    line-height: 2.5;
+    padding-left: 19px;
+    font-size: 16px;
+}
+
+input#myInput {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    padding: 12px 40px;
+}
+
+/*table, .table {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}*/
+
+.edit {
+    /*color: #fff;*/
+    text-decoration: none;
+}
+
+span.delete {
+    /*color: #fff;*/
+    text-decoration: none;
+}
+
+table a:not(.btn), .table a:not(.btn) {
+    text-decoration: none;
+    display: inline-block;
+}
+
+th {
+    width: 25%;
+}
+
+input#item, #place, #time {
+    border-radius: 0;
+}
+
+button.btn.btn-primary.add-row {
+    border-radius: 0;
+}
+
+ .edit_button {
+    display: inline-block;
+    cursor: pointer;
+} 
